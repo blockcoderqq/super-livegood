@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webinar Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #008080;
+        }
+        .header img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .webinar-form {
+            width: 100%;
+            max-width: 500px;
+        }
+        .video-container {
+            position: relative;
+        }
+        .live-indicator {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: red;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            animation: blink 1s linear infinite; /* Add this line */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="LIVEGOOD Logo">
+        <h1>PRESENTATION</h1>
+    </div>
+    <div class="content">
+        <div id="countdown"></div> <!-- Add this line -->
+        <div class="video-container">
+            <video id="myVideo" width="420" height="240" controls> <!-- Modify this line -->
+                <source src="Livemark.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="live-indicator">LIVE</div>
+        </div>
+
+        <h2>Sign Up for Our Webinar</h2>
+        <form class="webinar-form" action="https://formspree.io/f/your_form_id" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br> <!-- Add required attribute here -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br> <!-- And here -->
+            <input type="submit" value="Submit">
+        </form>
+        
+    </div>
+
+</body>
+</html>
